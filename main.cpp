@@ -1,13 +1,21 @@
-#include "dep/glfw/glfw3.h"
-#include <iostream>
-
 #include "src/graphic/window.h"
+
+#include <map>
 
 int main() {
 	using namespace sparky;
 	using namespace graphics;
 
-	Window window("Sparky", 800, 600);
+	std::map<char, int> size = {
+		{
+			'w', 800
+		},
+		{
+			'h', 600
+		}
+	};
+
+	Window window("Sparky", size);
 	glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
 
 	while (!window.closed()) {
