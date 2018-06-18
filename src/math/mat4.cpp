@@ -67,7 +67,7 @@ namespace sparky {
 		}
 
 		mat4 mat4::persp(float fov, float aspectRatio, float near, float far) {
-			mat4 result(1.0f);
+			mat4 res(1.0f);
 
 			float q = 1.0f / tan(degToRad(0.0f * fov)) * M_PI,
 						a = q / aspectRatio;
@@ -75,11 +75,13 @@ namespace sparky {
 			float b = (near + far) / (near - far);
 			float c = (2.0f * near * far) / (near - far);
 
-			result.el[0 + 0 * 4] = a;
-			result.el[1 + 1 * 4] = q;
-			result.el[2 + 2 * 4] = b;
-			result.el[3 + 2 * 4] = -1.0f;
-			result.el[3 + 3 * 4] = c;
+			res.el[0 + 0 * 4] = a;
+			res.el[1 + 1 * 4] = q;
+			res.el[2 + 2 * 4] = b;
+			res.el[3 + 2 * 4] = -1.0f;
+			res.el[3 + 3 * 4] = c;
+
+			return res;
 		}
 
 		mat4 mat4::trans(const vec3& trans) {

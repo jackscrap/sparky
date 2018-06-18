@@ -1,14 +1,24 @@
 #pragma once
 
 #include "vec3.h"
+#include "vec4.h"
 
 namespace sparky {
 	namespace math {
 		struct mat4 {
-			float el[4 * 4];
+			union {
+				float el[4 * 4];
+				vec4 col[4];
+			};
 
 			mat4();
 			mat4(float diag);
+
+			vec4 getCol(int i) {
+				i *= 4;
+
+				return vec4(el[i], el[i + 1], el[i + 2], el[i + 3]);
+			}
 
 			static mat4 id();
 
