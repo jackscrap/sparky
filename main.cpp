@@ -1,10 +1,12 @@
 #include "src/graphic/window.h"
+#include "src/math/vec2.h"
 
 #include <map>
 
 int main() {
 	using namespace sparky;
 	using namespace graphics;
+	using namespace math;
 
 	std::map<char, int> size = {
 		{

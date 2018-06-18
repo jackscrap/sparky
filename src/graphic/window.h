@@ -16,7 +16,7 @@ namespace sparky {
 				const char* m_Title;
 				std::map<char, int> m_Size;
 
-				GLFWwindow *m_Window;
+				GLFWwindow* m_Window;
 
 				bool m_Key[MAX_KEY],
 						 m_Btn[MAX_BTN];
