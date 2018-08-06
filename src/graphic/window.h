@@ -10,7 +10,7 @@
 #define MAX_BTN 32
 
 namespace sparky {
-	namespace graphics {
+	namespace graphic {
 		class Window {
 			private:
 				const char* m_Title;

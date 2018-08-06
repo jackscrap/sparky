@@ -4,7 +4,7 @@
 #include "window.h"
 
 namespace sparky {
-	namespace graphics {
+	namespace graphic {
 		Window::Window(const char* title, std::map<char, int> size) {
 			m_Title = title;
 			m_Size = size;
